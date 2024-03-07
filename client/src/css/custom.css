@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 
 :root {
     --primary-color: #fff;
@@ -234,7 +234,7 @@ a:hover {
 /* header section styling end here */
 /* banner section styling start here */
 .banner-main-section {
-    background-image: url(../assets/images/car02.jpg) ;
+    background-image: url(../assets/images/drone-img.png) ;
     background-size: cover;
     height: 983px;
     position: relative;
@@ -311,7 +311,7 @@ a:hover {
 
 .consulting-services-section::before {
     content: "";
-    background: url(../images/consulting-service-left-shape.png) no-repeat center;
+    background: url(../assets/images/project-shape.png) no-repeat center;
     width: 617px;
     height: 398px;
     position: absolute;
@@ -714,7 +714,7 @@ a:hover {
 /* cases section styling end here */
 /* mission section styling start here */
 .mission-section {
-    background: url(../images/mission-bg-img.jpg) no-repeat center;
+    background: url(../assets/images/mission.png) no-repeat center;
     background-size: cover;
     height: 533px;
     position: relative;
@@ -824,6 +824,8 @@ a:hover {
 }
 
 .faq-list-con {
+    background-image: url(../assets/images/quote.png);
+    background-size: cover;
     display: grid;
     gap: 20px;
     grid-template-columns: 66% 30%;
@@ -842,11 +844,11 @@ a:hover {
 }
 
 .faq-box .card-header h5 .btn::after {
-    content: "\f068";
+    content: "\f056";
 }
 
 .faq-box .card-header h5 .btn.collapsed::after {
-    content: "\f067";
+    content: "\f055";
     color: var(--button-color);
 }
 
@@ -1031,7 +1033,7 @@ a:hover {
 /* customer slider section styling end here */
 /* progress counter section styling start here */
 .progress-counter-section {
-    background: url(../images/customer-counter-bg.jpg) no-repeat center;
+    background: url(../assets/images/data-bg.png) no-repeat center;
     background-size: cover;
     height: 473px;
     position: relative;

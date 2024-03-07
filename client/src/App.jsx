@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'
 import AOS from 'aos';
 import Signup from './signup'
 import Login from './login'
