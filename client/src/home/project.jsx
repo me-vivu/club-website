@@ -1,6 +1,26 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState, useEffect } from 'react';
 
 const ProjectSection = () => {
+
+    const [projects, setProjects] = useState([]);
+   
+    useEffect(() => {
+        // Fetch carousel items from server
+        axios.get('http://localhost:3001/projects')
+            .then(response => {
+
+                if (response.data) {
+                    const limitedProjects = response.data.slice(0, 3);
+                    setProjects(limitedProjects);
+                }
+            })
+            .catch(error => console.error('Error fetching project items:', error));
+    }, []);
+
+    
+
+
     return (
         <section className="consulting-services-section w-100 float-left padding-top padding-bottom">
             <div className="container">
@@ -10,29 +30,14 @@ const ProjectSection = () => {
                         <p>Transforming Visions into Reality.</p>
                     </div>
                     <div className="consulting-services-inner-con" data-aos="fade-up" data-aos-duration="700">
-                        <div className="consulting-services-box" id = "proj-1">
-                            <h4>Autonomous <br /> Drone</h4>
-                            <div className="consulting-services-img-con d-flex align-items-center">
-                                <a href="single-service.html">READ MORE</a>
-                                
+                        {projects.map(project => (
+                            <div className="consulting-services-box" key={project.projectID} style={{backgroundImage: `url(${project.imgSrc})`, backgroundSize: 'cover'}}>
+                                <h4 style={{color: 'white'}}>{project.projectName.split(" ")[0]} <br/> {project.projectName.split(" ")[1]}</h4>
+                                <div className="consulting-services-img-con d-flex align-items-center">
+                                    <a href={`single-service.html?id=${project.id}`}>READ MORE</a>
+                                </div>
                             </div>
-                        </div>
-                        <div className="consulting-services-box" id = "proj-2">
-                            <h4>Micromouse <br /> Bot </h4>
-                            <div className="consulting-services-img-con d-flex align-items-center">
-                                <a href="single-service.html">READ MORE</a>
-                                
-                            </div>
-                        </div>
-                        <div className="consulting-services-box" id = "proj-3">
-                            <h4>Augmented <br /> Reality</h4>
-                            <div className="consulting-services-img-con d-flex align-items-center">
-                                <a href="single-service.html">READ MORE</a>
-                                
-                            </div>
-                        </div>
-
-                        
+                        ))}
                     </div>
                 </div>
             </div>
