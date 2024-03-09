@@ -30,10 +30,10 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link p-0 active" href="index.html">HOME</a>
+                <a className="nav-link p-0 active" href="/home-page">HOME</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link p-0" href="about.html">ABOUT</a>
+                <a className="nav-link p-0" href="/register">ABOUT</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link p-0" href="projects.html">PROJECTS</a>

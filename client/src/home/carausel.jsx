@@ -3,10 +3,12 @@ import { Carousel } from 'react-responsive-carousel';
 import axios from 'axios'; // Import Axios
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import "./home-page.css";
+import { useNavigate } from 'react-router-dom';
 import 'aos/dist/aos.css';
 
 const CarouselComponent = () => {
     const [carouselItems, setCarouselItems] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         // Fetch carousel items from server
@@ -33,7 +35,7 @@ const CarouselComponent = () => {
                     <span className="d-block">{item.header}</span>
                     <h1>{item.firstLine} <br/> {item.secondLine}</h1>
                     <div className="generic-btn">
-                        <a href={item.link}>DISCOVER MORE</a>
+                        <a href="./register">DISCOVER MORE</a>
                     </div>
                 </div>
             ))}
