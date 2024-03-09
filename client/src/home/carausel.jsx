@@ -25,6 +25,7 @@ const CarouselComponent = () => {
             interval={4000}
             transitionTime={800}
             autoPlay={true}
+            showThumbs={false}
             infiniteLoop={true}>
 
             {carouselItems.map((item, index) => (
