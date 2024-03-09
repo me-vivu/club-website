@@ -1,0 +1,46 @@
+.logo1{
+    height: auto;
+    width: 70px;
+    align-items: center;
+}
+.header-main-con .navbar-nav .nav-item a.nav-link {
+    position: relative;
+}
+.mb-0{
+    /* background-color: aqua; */
+    /* height: auto;
+    width: 500px; */
+}
+.fa-facebook-f{
+    background-color: white;
+}
+.header-main-con{
+    background-color: black;
+    margin-top: 0px;
+    height: 100px;
+}
+.sub-banner-section{
+    background-image: url(image2.jpeg);
+    margin-top: 150px;
+    
+    background-size: cover; /* Optional: Adjust how the background image is displayed */
+    background-position: center;
+    overflow: hidden;
+}
+.image1{
+    max-width:  500px;
+    max-width:  500px;
+    margin-left: 400px;
+    margin-top: 150px;
+}
+.about-team-member {
+    position: relative;
+    display: inline-block;
+    height: 460px;
+width: 350px;
+}
+.teammemberimage {
+   height: 450px;
+   width: 350px;
+    object-fit: cover; 
+}
