@@ -26,6 +26,8 @@ import EventSection from "./events";
 import NavigationSection from "./navigation"
 import ScrollToTopButton from "./scrollTop";
 
+import { useNavigate } from "react-router-dom";
+
 
 
 import logo from "../assets/images/nitap-logo.png";
@@ -38,6 +40,8 @@ import "../css/custom.css"
 import "./home-page.css"
 
 function OwlCarouselCustomer() {
+
+
     useEffect(() => {
         const owl = $("#owl-carousel-customer");
         owl.owlCarousel();
@@ -147,6 +151,8 @@ function CounterAnimation() {
 
 
 function HomePage(){
+
+    const navigate = useNavigate();
     return(
         <div>
 
@@ -165,6 +171,7 @@ function HomePage(){
         
         <section className="banner-main-section w-100 float-left d-flex align-items-center">
             <CarouselComponent/>
+            
         </section>
         
 
