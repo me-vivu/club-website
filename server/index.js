@@ -3,7 +3,14 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const SignupModel = require('./models/signup')
 const Token = require('./models/token')
+const Carousel = require("./models/carausel")
+const Events = require("./models/events")
+const Members = require("./models/members")
+const Project = require("./models/project")
 const crypto = require("crypto")
+
+const projectRouter = require("./api/projects")
+
 const verify = require('./utils')
 require("dotenv").config();
 
@@ -76,6 +83,52 @@ app.post("/login" , (req, res) =>{
     })
 
 })
+
+app.post('/carousels', async (req, res) => {
+    try {
+      const { header, firstLine, secondLine, link } = req.body;
+  
+      // Validate request body
+      if (!header || !firstLine || !link) {
+        return res.status(400).json({ message: 'Please provide header, firstLine, and link' });
+      }
+  
+      // Create new carousel item
+      const newCarousel = new Carousel({
+        header,
+        firstLine,
+        secondLine,
+        link
+      });
+  
+      // Save the carousel item to the database
+      await newCarousel.save();
+  
+      // Send success response
+      res.status(201).json({ message: 'Carousel item created successfully', data: newCarousel });
+    } catch (err) {
+      console.error('Error creating carousel item:', err);
+      res.status(500).json({ message: 'Server error' });
+    }
+});
+
+
+app.get('/getCarousels', async (req, res) => {
+    try {
+        // Fetch all carousel items from the database
+        const carousels = await Carousel.find();
+
+        // Send success response with the retrieved carousel items
+        res.status(200).json({ message: 'Carousel items retrieved successfully', data: carousels });
+    } catch (err) {
+        console.error('Error retrieving carousel items:', err);
+        res.status(500).json({ message: 'Server error' });
+    }
+});
+
+
+app.use(projectRouter);
+
 
 
 app.listen(3001, ()=>{

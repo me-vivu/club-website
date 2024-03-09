@@ -7,3 +7,32 @@
     
 }
 
+#proj-1{
+    background-image: url(../assets/images/drone-img.png);
+    background-size: cover;
+}
+
+#proj-2{
+    background-image: url(../assets/images/micromouse.jpg);
+    background-size: cover;
+
+}
+#proj-3{
+    background-image: url(../assets/images/drone-img.png);
+    background-size: cover;
+ 
+}
+
+.quote-img{
+    height: 200px;
+}
+
+.footer-logo{
+    width: 50px;
+}
+
+.event-img{
+    width: 350px;
+    height: 338px;
+}
+
