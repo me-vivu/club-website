@@ -24,12 +24,15 @@ import ProgressCounterSection from "./dataView";
 import Footer from "./footer";
 import EventSection from "./events";
 import NavigationSection from "./navigation"
+import ScrollToTopButton from "./scrollTop";
+
 
 
 import logo from "../assets/images/nitap-logo.png";
 import instagram from "../assets/images/icons/instagram.png";
 import facebook from "../assets/images/icons/facebook.png";
 import linkedin from "../assets/images/icons/linkedin.png";
+
 
 import "../css/custom.css"
 import "./home-page.css"
@@ -75,35 +78,35 @@ function Preloader() {
     return null;
 }
 
-function ScrollToTopButton() {
-    const [isVisible, setIsVisible] = useState(false);
+// function ScrollToTopButton() {
+//     const [isVisible, setIsVisible] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 300) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
-            }
-        };
+//     useEffect(() => {
+//         const handleScroll = () => {
+//             if (window.scrollY > 300) {
+//                 setIsVisible(true);
+//             } else {
+//                 setIsVisible(false);
+//             }
+//         };
 
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+//         window.addEventListener('scroll', handleScroll);
+//         return () => window.removeEventListener('scroll', handleScroll);
+//     }, []);
 
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    };
+//     const scrollToTop = () => {
+//         window.scrollTo({
+//             top: 0,
+//             behavior: 'smooth'
+//         });
+//     };
 
-    return (
-        <button id="button" className={isVisible ? 'show' : ''} onClick={scrollToTop}>
-            Scroll To Top
-        </button>
-    );
-}
+//     return (
+//         <button id="button" className={isVisible ? 'show' : ''} onClick={scrollToTop}>
+//             Scroll To Top
+//         </button>
+//     );
+// }
 
 function SkillBarsAnimation() {
     useEffect(() => {
@@ -170,16 +173,14 @@ function HomePage(){
 
         <MentorSection/>
         <br/>
-        <br/>
+        
         <MissionSection/>
         <FaqSection/>
         <ProgressCounterSection/>
         <EventSection/>
         <Footer/>
-        
-            
-            
-            
+        <ScrollToTopButton/>
+
 
         </div>
     )

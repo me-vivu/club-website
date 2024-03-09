@@ -1,5 +1,5 @@
 import React from 'react';
-import MentorImg from "../assets/images/profile.jpg"
+import MentorImg from "../assets/images/mentor.png"
 
 const MentorSection = () => {
 
@@ -30,19 +30,19 @@ const MentorSection = () => {
                 {/* market bottom boxes */}
                 <div className="characteristics-section" data-aos="fade-up" data-aos-duration="700">
                     <div className="characteristics-box d-flex align-items-center">
-                        <div className="characteristics-numb">01</div>
+                        
                         <div className="characteristics-txt">
-                            <span className="d-block">GET PROFESSIONAL ADVICE</span>
-                            <p className="mb-0">There are many variations of available but the majority have suffered
-                                alteration.</p>
+                            <span className="d-block">EMBRACE FAILURE AS A STEPPING STONE   </span>
+                            <p className="mb-0">Failure is not the end but a crucial part of the learning process.
+                             Embrace failure as a stepping stone toward success.</p>
                         </div>
                     </div>
                     <div className="characteristics-box characteristics-box2 d-flex align-items-center">
-                        <div className="characteristics-numb">02</div>
+                        
                         <div className="characteristics-txt">
-                            <span className="d-block">TRUSTED & PROFESSIONAL</span>
-                            <p className="mb-0">There are many variations of available but the majority have suffered
-                                alteration.</p>
+                            <span className="d-block">FOSTER COLLABORATION AND DIVERSITY</span>
+                            <p className="mb-0"> collaboration and diversity are key to 
+                            driving innovation and creating meaningful solutions.</p>
                         </div>
                     </div>
                 </div>

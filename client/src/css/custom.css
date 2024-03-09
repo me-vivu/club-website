@@ -240,14 +240,11 @@ a:hover {
     position: relative;
 }
 
-/* .banner-main-section::after {
-    content: "";
-    background-image: url(../assets/images/car02.jpg) ;
-    height: 984px;
-    position: absolute;
-    right: 0;
-    top: 0;
-} */
+.banner-inner-section{
+    padding-top: 8%;
+    text-align: left;
+    padding-left: 10%;
+}
 
 .banner-inner-section span {
     font-size: 18px;
