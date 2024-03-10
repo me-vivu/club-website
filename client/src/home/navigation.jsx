@@ -3,7 +3,7 @@ import logo from "../assets/images/nitap-logo.png";
 import instagram from "../assets/images/icons/instagram.png";
 import facebook from "../assets/images/icons/facebook.png";
 import linkedin from "../assets/images/icons/linkedin.png";
-
+import { useNavigation } from 'react-router-dom';
 function Header() {
   return (
     <div className="header-main-con w-100 float-left">
@@ -33,15 +33,15 @@ function Header() {
                 <a className="nav-link p-0 active" href="/home-page">HOME</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link p-0" href="/register">ABOUT</a>
+                <a className="nav-link p-0" href="/about">ABOUT</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link p-0" href="projects.html">PROJECTS</a>
+                <a className="nav-link p-0" href="/projects">PROJECTS</a>
               </li>
               
               
               <li className="nav-item">
-                <a className="nav-link p-0" href="events.html">EVENTS</a>
+                <a className="nav-link p-0" href="/eventsection">EVENTS</a>
               </li>
 
               

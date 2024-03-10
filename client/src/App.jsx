@@ -7,6 +7,7 @@ import OtpVerify from './auth/otpVerify'
 import AboutUs from './about/about-us';
 import EVENT1 from './events/eventsection';
 import Belownav from './events/belownav';
+import Projects from './project-section/project';
 
 
 import{BrowserRouter, Routes, Route} from 'react-router-dom'
@@ -29,6 +30,7 @@ function App() {
 
         <Route path='/eventsection' element={<EVENT1/>}></Route>
         <Route path='/belownav' element={<Belownav/>}></Route>
+        <Route path='/projects' element={<Projects/>}></Route>
       </Routes>
     
     </BrowserRouter>

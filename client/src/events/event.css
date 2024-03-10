@@ -2,3 +2,24 @@
     height:540px ;
     max-width: 466px;
 }
+.eventstext{
+    align-items: center;
+  
+}
+.textsofevent{
+   
+    align-items: center;
+    /* color: black; */
+margin-left: 50%;
+margin-top: 150px;
+}
+.sub-banner-section1{
+    background-image: url(IMG_2175.JPG);
+    /* margin-top: 150px; */
+    
+    background-size: cover; /* Optional: Adjust how the background image is displayed */
+    background-position: center;
+    overflow: hidden;
+    height: 1000px;
+
+}
