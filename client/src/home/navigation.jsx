@@ -33,15 +33,15 @@ function Header() {
                 <a className="nav-link p-0 active" href="/home-page">HOME</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link p-0" href="/register">ABOUT</a>
+                <a className="nav-link p-0" href="/about">ABOUT</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link p-0" href="projects.html">PROJECTS</a>
+                <a className="nav-link p-0" href="/eventsection">PROJECTS</a>
               </li>
               
               
               <li className="nav-item">
-                <a className="nav-link p-0" href="events.html">EVENTS</a>
+                <a className="nav-link p-0" href="/eventsection">EVENTS</a>
               </li>
 
               

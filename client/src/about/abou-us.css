@@ -14,15 +14,9 @@
 .fa-facebook-f{
     background-color: white;
 }
-.header-main-con{
-    background-color: black;
-    margin-top: 0px;
-    height: 100px;
-}
+
 .sub-banner-section{
     background-image: url(image2.jpeg);
-    margin-top: 150px;
-    
     background-size: cover; /* Optional: Adjust how the background image is displayed */
     background-position: center;
     overflow: hidden;
