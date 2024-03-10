@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "../home/navigation";
+
 import Footer from "../home/footer";
 import UPimg from "../events/belownav";
 // import img2 from "../assets/images/image4.jpeg"
@@ -14,9 +15,21 @@ function eventsimage(){
     return(
         <div>
                <Navigation/>
-               <UPimg/>
+            
+               <section className="sub-banner-section1 about-page-banner w-100 float-left d-flex align-items-center">
+                <div className="container">
+                    <div className="sub-banner-inner-section" >
+                        <h1 className="texthai"> OUR EVENTS</h1>
+                    </div>
+                </div>
+            </section>
+               {/* <UPimg/> */}
               
+<<<<<<< HEAD
         
+=======
+     
+>>>>>>> 59f90fc658482b76f01b6da0aea3fe32ecd4c5e6
 
     <section className="supplementory-section w-100 float-left padding-top padding-bottom">
         <div className="container">
@@ -37,9 +50,9 @@ function eventsimage(){
                         <figure className="mb-0">
                             <img src={first} alt="consumer-market-img" loading="lazy" className="imagehai"/>
                         </figure>
-                        <figure className="mb-0 supplementory-icon">
+                        {/* <figure className="mb-0 supplementory-icon">
                             <img src="assets/images/market-consumer-icon.png" alt="market-consumer-icon" loading="lazy"/>
-                        </figure>
+                        </figure> */}
                     </div>
                 </div>
             </div>
@@ -62,10 +75,10 @@ function eventsimage(){
                         <figure className="mb-0">
                             <img src={second} alt="consumer-market-img2" loading="lazy" className="imagehai"/>
                         </figure>
-                        <figure className="mb-0 supplementory-icon">
+                        {/* <figure className="mb-0 supplementory-icon">
                             <img src="assets/images/business-insurence-icon.png" alt="business-insurence-icon"
                                 loading="lazy"/>
-                        </figure>
+                        </figure> */}
                     </div>
                 </div>
             </div>
@@ -87,9 +100,9 @@ function eventsimage(){
                         <figure className="mb-0">
                             <img src={third} alt="communication-img" loading="lazy" className="imagehai"/>
                         </figure>
-                        <figure className="mb-0 supplementory-icon">
+                        {/* <figure className="mb-0 supplementory-icon">
                             <img src="assets/images/communication-icon.png" alt="communication-icon" loading="lazy"/>
-                        </figure>
+                        </figure> */}
                     </div>
                 </div>
             </div>
@@ -114,10 +127,10 @@ function eventsimage(){
                         <figure className="mb-0">
                             <img src={forth} alt="consumer-market-img2" loading="lazy" className="imagehai"/>
                         </figure>
-                        <figure className="mb-0 supplementory-icon">
+                        {/* <figure className="mb-0 supplementory-icon">
                             <img src="assets/images/business-insurence-icon.png" alt="business-insurence-icon"
                                 loading="lazy"/>
-                        </figure>
+                        </figure> */}
                     </div>
                 </div>
             </div>
@@ -140,9 +153,9 @@ function eventsimage(){
                         <figure className="mb-0">
                             <img src={fifth} alt="communication-img" loading="lazy" className="imagehai"/>
                         </figure>
-                        <figure className="mb-0 supplementory-icon">
+                        {/* <figure className="mb-0 supplementory-icon">
                             <img src="assets/images/communication-icon.png" alt="communication-icon" loading="lazy"/>
-                        </figure>
+                        </figure> */}
                     </div>
                 </div>
             </div>

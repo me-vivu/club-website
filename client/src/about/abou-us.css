@@ -11,7 +11,10 @@
     /* height: auto;
     width: 500px; */
 }
-.fa-facebook-f{
+/* .texthai{
+    color: black;
+} */
+/* .fa-facebook-f{
     background-color: white;
 }
 
@@ -20,12 +23,14 @@
     background-size: cover; /* Optional: Adjust how the background image is displayed */
     background-position: center;
     overflow: hidden;
+    height: 1000px;
+
 }
 .image1{
-    max-width:  500px;
-    max-width:  500px;
-    margin-left: 400px;
-    margin-top: 150px;
+    height:  466px;
+    width:  540px;
+    /* margin-left: 400px;
+    margin-top: 200px; */
 }
 .about-team-member {
     position: relative;

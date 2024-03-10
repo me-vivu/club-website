@@ -2,6 +2,7 @@ import React from "react";
 
 import Footer from "../home/footer";
 import Navigation from "../home/navigation";
+import MembImage from "./about-team";
 import ProgressCounterSection from "../home/dataView";
 
 import img2 from "../assets/images/image4.jpeg"
@@ -29,7 +30,7 @@ function AboutUs(){
             <section className="sub-banner-section about-page-banner w-100 float-left d-flex align-items-center">
                 <div className="container">
                     <div className="sub-banner-inner-section" >
-                        <h1>ABOUT US</h1>
+                        <h1 className="texthai"> ABOUT US</h1>
                     </div>
                 </div>
             </section>
@@ -52,16 +53,14 @@ function AboutUs(){
                         </div>
                         <div className="vision-img-con" data-aos="fade-up" data-aos-duration="700">
                             <div className="vision-imgs-box position-relative">
-                                {/* <figure className="mb-0">
+                                <figure className="mb-0">
                                     {/* what is problem here */}
 
 
 
-                                    {/* <img src={img2} alt="vision-img" loading="lazy"/>
-                                </figure> */} 
-                                <figure className="vision-scope-img mb-0">
-                                    <img  src={img2} alt="vision-scope-img" loading="lazy" className="image1"/>
-                                </figure>
+                                    <img src={img2} alt="vision-img" loading="lazy" className="image1"/>
+                                </figure>  
+                               
                             </div>
                         </div>
                     </div>
@@ -70,128 +69,32 @@ function AboutUs(){
          
             {/* <!-- MISSION SECTION END HERE -->
             <!-- ABOUT TEAM SECTION START HERE --> */}
+          
             <section className="about-team-section w-100 float-left padding-top padding-bottom">
                 <div className="container">
                     <div className="generic-title text-center" >
                         <h2>CONSULTKING TEAM</h2>
                         <p>Podcasting operational change management</p>
                     </div>
-                    <div className="about-team-inner-con" >
-                        <div className="about-team-member">
-                            <figure className="mb-0">
-                                <img src={first} alt="team-member-img1" loading="lazy" className="teammemberimage"/>
-                            </figure>
-                            <div className="about-team-member-details">
-                                <span>CHIEF EXECUTIVE</span>
-                                <h3>DURAN MOSA</h3>
-                                <div className="header-social-links">
-                                    <ul className="list-unstyled mb-0 d-flex align-items-center">
-                                        <li><a href="https://www.facebook.com/login/"><i className="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login"><i className="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://twitter.com/i/flow/login"><i className="fab fa-twitter"></i></a></li>
-                                        <li><a
-                                                href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fonetap%2F%3Fnext%3D%252F%26__coig_login%3D1"><i
-                                                    className="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="about-team-member">
-                            <figure className="mb-0">
-                                <img src={second} alt="team-member-img2" loading="lazy" className="teammemberimage"/>
-                            </figure>
-                            <div className="about-team-member-details">
-                                <span>LEAD CONSULTANT</span>
-                                <h3>MILANI COSTAL</h3>
-                                <div className="header-social-links">
-                                    <ul className="list-unstyled mb-0 d-flex align-items-center">
-                                        <li><a href="https://www.facebook.com/login/"><i className="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login"><i className="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://twitter.com/i/flow/login"><i className="fab fa-twitter"></i></a></li>
-                                        <li><a
-                                                href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fonetap%2F%3Fnext%3D%252F%26__coig_login%3D1"><i
-                                                    className="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="about-team-member">
-                            <figure className="mb-0">
-                                <img src={third} alt="team-member-img3" loading="lazy" className="teammemberimage"/>
-                            </figure>
-                            <div className="about-team-member-details">
-                                <span>HR CONSULTANT</span>
-                                <h3>ALISHIA JONS</h3>
-                                <div className="header-social-links">
-                                    <ul className="list-unstyled mb-0 d-flex align-items-center">
-                                        <li><a href="https://www.facebook.com/login/"><i className="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login"><i className="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://twitter.com/i/flow/login"><i className="fab fa-twitter"></i></a></li>
-                                        <li><a
-                                                href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fonetap%2F%3Fnext%3D%252F%26__coig_login%3D1"><i
-                                                    className="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="about-team-member">
-                            <figure className="mb-0">
-                                <img src={forth} alt="team-member-img4" loading="lazy" className="teammemberimage"/>
-                            </figure>
-                            <div className="about-team-member-details">
-                                <span>LAW CONSULTANT</span>
-                                <h3>SHING SHONG</h3>
-                                <div className="header-social-links">
-                                    <ul className="list-unstyled mb-0 d-flex align-items-center">
-                                        <li><a href="https://www.facebook.com/login/"><i className="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login"><i className="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://twitter.com/i/flow/login"><i className="fab fa-twitter"></i></a></li>
-                                        <li><a
-                                                href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fonetap%2F%3Fnext%3D%252F%26__coig_login%3D1"><i
-                                                    className="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="about-team-member">
-                            <figure className="mb-0">
-                                <img src={fifth} alt="team-member-img5" loading="lazy" className="teammemberimage"/>
-                            </figure>
-                            <div className="about-team-member-details">
-                                <span>LAW CONSULTANT</span>
-                                <h3>KEMRI MINTHOR</h3>
-                                <div className="header-social-links">
-                                    <ul className="list-unstyled mb-0 d-flex align-items-center">
-                                        <li><a href="https://www.facebook.com/login/"><i className="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login"><i className="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://twitter.com/i/flow/login"><i className="fab fa-twitter"></i></a></li>
-                                        <li><a
-                                                href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fonetap%2F%3Fnext%3D%252F%26__coig_login%3D1"><i
-                                                    className="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="about-team-member">
-                            <figure className="mb-0">
-                                <img src={sixth} alt="team-member-img6" loading="lazy" className="teammemberimage"/>
-                            </figure>
-                            <div className="about-team-member-details">
-                                <span>LAW CONSULTANT</span>
-                                <h3>JOBAN DAR</h3>
-                                <div className="header-social-links">
-                                    <ul className="list-unstyled mb-0 d-flex align-items-center">
-                                        <li><a href="https://www.facebook.com/login/"><i className="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/login"><i className="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="https://twitter.com/i/flow/login"><i className="fab fa-twitter"></i></a></li>
-                                        <li><a
-                                                href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fonetap%2F%3Fnext%3D%252F%26__coig_login%3D1"><i
-                                                    className="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <MembImage/>
+                    <MembImage/> 
+                     <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       <MembImage/>
+                       
                 </div>
             </section>
             
