@@ -11,6 +11,8 @@ import forth from "../assets/images/vivekbhyia.jpg"
 import fifth from "../assets/images/abhilashbhyia.jpg"
 import sixth from "../assets/images/dubeybhyia.jpg"
 import "./event.css" ; 
+
+
 function eventsimage(){
     return(
         <div>
@@ -25,11 +27,7 @@ function eventsimage(){
             </section>
                {/* <UPimg/> */}
               
-<<<<<<< HEAD
-        
-=======
-     
->>>>>>> 59f90fc658482b76f01b6da0aea3fe32ecd4c5e6
+      
 
     <section className="supplementory-section w-100 float-left padding-top padding-bottom">
         <div className="container">

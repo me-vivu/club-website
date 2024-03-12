@@ -16,6 +16,7 @@ const CarouselComponent = () => {
             .then(response => {
                 if (response.data && response.data.data) {
                     setCarouselItems(response.data.data);
+                    console.log(carouselItems);
                 }
             })
             .catch(error => console.error('Error fetching carousel items:', error));

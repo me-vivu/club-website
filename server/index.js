@@ -9,6 +9,12 @@ const Members = require("./models/members")
 const Project = require("./models/project")
 const crypto = require("crypto")
 
+const { google } = require('googleapis');
+const Multer = require('multer');
+const fs = require('fs');
+
+
+
 const projectRouter = require("./api/projects")
 
 const verify = require('./utils')
@@ -117,6 +123,7 @@ app.get('/getCarousels', async (req, res) => {
     try {
         // Fetch all carousel items from the database
         const carousels = await Carousel.find();
+        console.log(carousels);
 
         // Send success response with the retrieved carousel items
         res.status(200).json({ message: 'Carousel items retrieved successfully', data: carousels });
@@ -128,6 +135,90 @@ app.get('/getCarousels', async (req, res) => {
 
 
 app.use(projectRouter);
+
+
+const multer = Multer({
+    storage: Multer.diskStorage({
+      destination: function (req, file, callback) {
+        
+        let destinationFolder;
+        console.log(req);
+        if (req.folder) {
+            console.log(req.folder)
+            destinationFolder = req.folder; // Get destination folder from request body
+        } else {
+            destinationFolder = ''; // Default folder if not specified in request
+        }
+        callback(null, `${__dirname}/${destinationFolder}`);
+      },
+      filename: function (req, file, callback) {
+        callback(null, file.fieldname + "_" + Date.now() + "_" + file.originalname);
+      },
+    }),
+    limits: {
+      fileSize: 5 * 1024 * 1024, // 5 MB
+    },
+});
+  
+const authenticateGoogle = () => {
+    const auth = new google.auth.GoogleAuth({
+        keyFile: './service-account.json',
+        scopes: "https://www.googleapis.com/auth/drive",
+    });
+return auth;
+};
+
+  
+const uploadToGoogleDrive = async (file, auth) => {
+    const fileMetadata = {
+        name: file.originalname,
+        parents: ["1MznEPr9l_-8XpWd3Mo4b-G-OdemF-pwu"], 
+};
+  
+const media = {
+    mimeType: file.mimetype,
+    body: fs.createReadStream(file.path),
+};
+
+const driveService = google.drive({ version: "v3", auth });
+  
+const response = await driveService.files.create({
+        requestBody: fileMetadata,
+        media: media,
+        fields: "id",
+    });
+    return response.data.id;
+};
+  
+const deleteFile = (filePath) => {
+    fs.unlink(filePath, (err) => {
+        if (err) {
+        console.error("Error deleting file:", err);
+        } else {
+        console.log("File deleted");
+        }
+    });
+};
+  
+app.post("/uploadData", multer.single("file"), async (req, res, next) => {
+    try {
+
+        
+        if (!req.file) {
+            res.status(400).send("No file uploaded.");
+            return;
+        }
+
+        const auth = authenticateGoogle();
+        const fileId = await uploadToGoogleDrive(req.file, auth);
+        deleteFile(req.file.path);
+        res.status(200).json({ fileId });
+
+    } catch (err) {
+        console.error("Error uploading file:", err);
+        res.status(500).send("Internal server error");
+    }
+});
 
 
 

@@ -6,40 +6,38 @@
 .header-main-con .navbar-nav .nav-item a.nav-link {
     position: relative;
 }
-.mb-0{
-    /* background-color: aqua; */
-    /* height: auto;
-    width: 500px; */
-}
-/* .texthai{
-    color: black;
-} */
-/* .fa-facebook-f{
-    background-color: white;
-}
 
+
+.header-main-con{
+  
+    margin-top: 0px;
+    height: 400px;
+}
 .sub-banner-section{
     background-image: url(image2.jpeg);
-    background-size: cover; /* Optional: Adjust how the background image is displayed */
+ 
+    
+    background-size: cover; 
     background-position: center;
     overflow: hidden;
-    height: 1000px;
+    height:  400px;
 
 }
 .image1{
     height:  466px;
     width:  540px;
-    /* margin-left: 400px;
-    margin-top: 200px; */
+  
 }
 .about-team-member {
     position: relative;
     display: inline-block;
-    height: 460px;
-width: 350px;
+    height: 400px;
+    width: 350px;
+    margin: 10px;
 }
+
 .teammemberimage {
-   height: 450px;
+   height: 400px;
    width: 350px;
     object-fit: cover; 
 }

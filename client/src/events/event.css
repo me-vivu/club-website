@@ -2,13 +2,6 @@
     height:540px ;
     max-width: 466px;
 }
-<<<<<<< HEAD
-
-.image1{
-    width: 100%;
-    object-fit: cover;
-}
-=======
 .eventstext{
     align-items: center;
   
@@ -17,17 +10,16 @@
    
     align-items: center;
     /* color: black; */
-margin-left: 50%;
-margin-top: 150px;
+    margin-left: 50%;
+    margin-top: 150px;
 }
 .sub-banner-section1{
-    background-image: url(IMG_2175.JPG);
+    background-image: url(../assets/images/drone-view.png);
     /* margin-top: 150px; */
     
     background-size: cover; /* Optional: Adjust how the background image is displayed */
     background-position: center;
     overflow: hidden;
-    height: 1000px;
+    height: 600px;
 
 }
->>>>>>> 59f90fc658482b76f01b6da0aea3fe32ecd4c5e6

@@ -21,7 +21,7 @@ const EventSection = () => {
                             <div className="comments">
                                 <span>BY ADMIN / <small>2 COMMENTS</small></span>
                             </div>
-                            <h4><a href="blog.html">BUSINESS ADVICE FOR GROWTH</a></h4>
+                            <h4><a href="blog.html">COLLOQUIUM</a></h4>
                             <p>Aellentesque porttitor lacus quis enim varius sed efficitur turpis gilla sed sit amet.</p>
                             <div className="blog-btn position-relative">
                                 <a href="blog.html">READ MORE</a>
@@ -38,7 +38,7 @@ const EventSection = () => {
                             <div className="comments">
                                 <span>BY ADMIN / <small>2 COMMENTS</small></span>
                             </div>
-                            <h4><a href="blog.html">BUSINESS ADVICE FOR GROWTH</a></h4>
+                            <h4><a href="blog.html">DRONE WORKSHOP</a></h4>
                             <p>Aellentesque porttitor lacus quis enim varius sed efficitur turpis gilla sed sit amet.</p>
                             <div className="blog-btn position-relative">
                                 <a href="blog.html">READ MORE</a>
@@ -55,7 +55,7 @@ const EventSection = () => {
                             <div className="comments">
                                 <span>BY ADMIN / <small>2 COMMENTS</small></span>
                             </div>
-                            <h4><a href="blog.html">BUSINESS ADVICE FOR GROWTH</a></h4>
+                            <h4><a href="blog.html">20'S IN 90'S</a></h4>
                             <p>Aellentesque porttitor lacus quis enim varius sed efficitur turpis gilla sed sit amet.</p>
                             <div className="blog-btn position-relative">
                                 <a href="blog.html">READ MORE</a>

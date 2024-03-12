@@ -7,8 +7,8 @@ function Aboutteam(){
             <img src={second} alt="team-member-img2" loading="lazy" className="teammemberimage"/>
         </figure>
         <div className="about-team-member-details">
-            <span>LEAD CONSULTANT</span>
-            <h3>MILANI COSTAL</h3>
+            <span>CO SECRETARY</span>
+            <h3>HARSHITA GUPTA</h3>
             <div className="header-social-links">
                 <ul className="list-unstyled mb-0 d-flex align-items-center">
                     <li><a href="https://www.facebook.com/login/"><i className="fab fa-facebook-f"></i></a></li>

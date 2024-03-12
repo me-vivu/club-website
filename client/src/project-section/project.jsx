@@ -10,8 +10,10 @@ import forth from "../assets/images/vivekbhyia.jpg"
 import fifth from "../assets/images/abhilashbhyia.jpg"
 import sixth from "../assets/images/dubeybhyia.jpg"
 
-import "./project.css" ; 
-function eventsimage(){
+import "./project.css" ;
+
+
+function Projectpage(){
     return(
         <div>
                <Navigation/>
@@ -178,4 +180,4 @@ function eventsimage(){
     
     )
 }
-export default eventsimage;
+export default Projectpage;
