@@ -10,13 +10,11 @@
    
     align-items: center;
     color: black;
-margin-left: 40%;
-margin-top: 150px;
+    margin-left: 40%;
+    margin-top: 150px;
 }
 .sub-banner-section2{
     background-image: url(drone-view.png);
-    /* margin-top: 150px; */
-    
     background-size: cover; /* Optional: Adjust how the background image is displayed */
     background-position: center;
     overflow: hidden;

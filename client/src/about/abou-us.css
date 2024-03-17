@@ -8,11 +8,7 @@
 }
 
 
-.header-main-con{
-  
-    margin-top: 0px;
-    height: 400px;
-}
+
 .sub-banner-section{
     background-image: url(image2.jpeg);
  
@@ -39,5 +35,7 @@
 .teammemberimage {
    height: 400px;
    width: 350px;
-    object-fit: cover; 
+   object-fit: cover;
+
+
 }

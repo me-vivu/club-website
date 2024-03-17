@@ -40,16 +40,8 @@ function GoogleDriveFileUploader() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="file" name="file" onChange={handleFileChange} />
-      <button type="submit">Submit</button>
-      {url && (
-        <div>
-          <p>File uploaded successfully!</p>
-          <p>Public URL: {url}</p>
-        </div>
-      )}
-    </form>
+    url
+    
   );
 }
 

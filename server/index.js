@@ -16,6 +16,7 @@ const fs = require('fs');
 
 
 const projectRouter = require("./api/projects")
+const membersRouter = require("./api/members")
 
 const verify = require('./utils')
 require("dotenv").config();
@@ -123,7 +124,7 @@ app.get('/getCarousels', async (req, res) => {
     try {
         // Fetch all carousel items from the database
         const carousels = await Carousel.find();
-        console.log(carousels);
+        
 
         // Send success response with the retrieved carousel items
         res.status(200).json({ message: 'Carousel items retrieved successfully', data: carousels });
@@ -135,6 +136,7 @@ app.get('/getCarousels', async (req, res) => {
 
 
 app.use(projectRouter);
+app.use(membersRouter);
 
 
 const multer = Multer({
@@ -142,7 +144,7 @@ const multer = Multer({
       destination: function (req, file, callback) {
         
         let destinationFolder;
-        console.log(req);
+        
         if (req.folder) {
             console.log(req.folder)
             destinationFolder = req.folder; // Get destination folder from request body
@@ -165,7 +167,7 @@ const authenticateGoogle = () => {
         keyFile: './service-account.json',
         scopes: "https://www.googleapis.com/auth/drive",
     });
-return auth;
+    return auth;
 };
 
   

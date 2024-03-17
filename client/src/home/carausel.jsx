@@ -14,34 +14,40 @@ const CarouselComponent = () => {
         // Fetch carousel items from server
         axios.get('http://localhost:3001/getCarousels')
             .then(response => {
+               
                 if (response.data && response.data.data) {
                     setCarouselItems(response.data.data);
-                    console.log(carouselItems);
+
                 }
             })
             .catch(error => console.error('Error fetching carousel items:', error));
-    }, []);
+    }, [carouselItems]);
 
     return (
-        <Carousel showIndicators={false}
+
+        
+        <Carousel
+            showIndicators={false}
             showStatus={false}
             interval={4000}
             transitionTime={800}
             autoPlay={true}
             showThumbs={false}
-            infiniteLoop={true}>
-
-            {carouselItems.map((item, index) => (
-                <div key={index} className="banner-inner-section">
+            infiniteLoop={true}
+            >
+                {carouselItems.map((item, index) => (
+                    <div key={index} className="banner-inner-section">
                     <span className="d-block">{item.header}</span>
-                    <h1>{item.firstLine} <br/> {item.secondLine}</h1>
+                    <h1>
+                        {item.firstLine} <br /> {item.secondLine}
+                    </h1>
                     <div className="generic-btn">
                         <a href="./register">DISCOVER MORE</a>
                     </div>
-                </div>
-            ))}
+                    </div>
+                ))}
         </Carousel>
-    );
+        );
 };
 
 export default CarouselComponent;

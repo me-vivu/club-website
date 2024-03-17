@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import uploadFileToGoogleDrive from '../../uploader'; // Assuming the file containing the function is located in ../../drive
+
 import "./add-members.css"
 
 const AddMemberForm = () => {
@@ -8,7 +10,8 @@ const AddMemberForm = () => {
     name: '',
     position: '',
     image: '',
-    emailId: ''
+    emailId: '',
+    linkedIn: ''
   });
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -20,10 +23,23 @@ const AddMemberForm = () => {
     });
   };
 
+  const handleFileChange = async (e) => {
+    const file = e.target.files[0];
+    try {
+      const imageUrl = await uploadFileToGoogleDrive(file);
+      setMemberData({
+        ...memberData,
+        image: imageUrl
+      });
+    } catch (error) {
+      console.error('Error uploading image:', error);
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/members', memberData);
+      const response = await axios.post('http://localhost:3001/members', memberData);
       console.log('Member added successfully:', response.data);
       setErrorMessage('');
       // Optionally, you can reset the form here
@@ -32,7 +48,8 @@ const AddMemberForm = () => {
         name: '',
         position: '',
         image: '',
-        emailId: ''
+        emailId: '',
+        linkedIn: ''
       });
     } catch (error) {
       console.error('Error adding member:', error);
@@ -86,12 +103,7 @@ const AddMemberForm = () => {
         </div>
         <div>
           <label>Image:</label>
-          <input
-            type="text"
-            name="image"
-            value={memberData.image}
-            onChange={handleChange}
-          />
+          <input type="file" name="file" onChange={handleFileChange} />
         </div>
         <div>
           <label>Email ID:</label>
@@ -99,6 +111,16 @@ const AddMemberForm = () => {
             type="email"
             name="emailId"
             value={memberData.emailId}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label>LinkedIn:</label>
+          <input
+            type="text"
+            name="linkedIn"
+            value={memberData.linkedIn}
             onChange={handleChange}
             required
           />

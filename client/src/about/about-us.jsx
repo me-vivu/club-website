@@ -76,24 +76,8 @@ function AboutUs(){
                         <h2>CONSULTKING TEAM</h2>
                         <p>Podcasting operational change management</p>
                     </div>
-                    <MembImage/>
+                    
                     <MembImage/> 
-                     <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
-                       <MembImage/>
                        
                 </div>
             </section>

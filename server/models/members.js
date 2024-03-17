@@ -16,11 +16,18 @@ const clubMemberSchema = new mongoose.Schema({
   image: {
     type: String
   },
+
   emailId: {
     type: String,
     required: true,
     unique: true
+  },
+
+  linkedIn: {
+    type: String,
+    required: true
   }
+
 });
 
 const ClubMember = mongoose.model('ClubMember', clubMemberSchema);

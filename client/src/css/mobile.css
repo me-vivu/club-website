@@ -21,6 +21,7 @@
 
     .banner-main-section {
         height: 810px;
+        
     }
 
     .banner-outer-section {
@@ -864,6 +865,7 @@
 
     .banner-main-section {
         height: 510px;
+        
     }
 
     .banner-main-section::after {
