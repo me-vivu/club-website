@@ -7,7 +7,7 @@ import OtpVerify from './auth/otpVerify'
 import AboutUs from './about/about-us';
 import EVENT1 from './events/eventsection';
 import Belownav from './events/belownav';
-
+import { Navigate } from 'react-router-dom';
 import ProjectSection from './home/project';
 
 import AddProjectForm from './database/projects/projects';
@@ -28,7 +28,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-    
+        <Route path='/' element={<Navigate to={"/home-page"} replace/>} />
         <Route path='/register' element={<Signup/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/verification' element={<OtpVerify/>}></Route>
