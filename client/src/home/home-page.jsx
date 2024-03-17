@@ -169,7 +169,7 @@ function HomePage(){
             
         <NavigationSection/>
         
-        <section className="banner-main-section w-100 float-left d-flex align-items-center">
+        <section className="banner-main-section w-100 float-left align-items-center">
             <CarouselComponent/>
             
         </section>

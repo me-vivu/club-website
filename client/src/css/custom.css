@@ -234,15 +234,19 @@ a:hover {
 /* header section styling end here */
 /* banner section styling start here */
 .banner-main-section {
+    
+    
+    
     background-image: url(../assets/images/drone-view.png) ;
     background-size: cover;
     height: 983px;
     width: 100%;
+
     position: relative;
 }
 
 .banner-inner-section{
-    padding-top: 8%;
+    
     text-align: left;
     padding-left: 10%;
 }
@@ -260,7 +264,8 @@ a:hover {
 }
 
 .banner-main-section .carousel {
-    position: unset;
+    position: set;
+    
 }
 
 .banner-outer-section {

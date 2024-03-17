@@ -17,6 +17,7 @@ const fs = require('fs');
 
 const projectRouter = require("./api/projects")
 const membersRouter = require("./api/members")
+const addEvents = require("./api/events")
 
 const verify = require('./utils')
 require("dotenv").config();
@@ -137,6 +138,8 @@ app.get('/getCarousels', async (req, res) => {
 
 app.use(projectRouter);
 app.use(membersRouter);
+app.use(addEvents);
+
 
 
 const multer = Multer({

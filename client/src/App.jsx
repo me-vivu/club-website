@@ -8,7 +8,7 @@ import AboutUs from './about/about-us';
 import EVENT1 from './events/eventsection';
 import Belownav from './events/belownav';
 
-import ProjectSection from './home/project';
+import ProjectSection from './project-section/project'
 
 import AddProjectForm from './database/projects/projects';
 import AddEventForm from './database/events/events';
