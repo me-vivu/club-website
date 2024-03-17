@@ -13,7 +13,7 @@ const ProgressCounterSection = () => {
                 <div className="customer-counter-inner-sec" data-aos="fade-up" data-aos-duration="700">
                     <div className="customer-counter-box">
                         <figure>
-                            <img src={OngoingProject} alt="counter-icon1" loading="lazy" id='progress-img'/>
+                            <img src={OngoingProject} alt="counter-icon1" loading="lazy" id='progress-img' />
                         </figure>
                         <div className="count d-inline-block">10</div>
                         <small>+</small>
