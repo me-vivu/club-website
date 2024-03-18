@@ -20,7 +20,8 @@ router.post('/members', async (req, res) => {
 // GET method to retrieve all members
 router.get('/members', async (req, res) => {
   try {
-    const members = await Member.find();
+    const members = await Member.find().sort({"memberID": 1});
+    
     res.json(members);
   } catch (error) {
     console.error('Error fetching members:', error);
