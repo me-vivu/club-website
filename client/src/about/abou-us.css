@@ -9,19 +9,11 @@
 
 
 
-.sub-banner-section{
-    background-image: url(image2.jpeg);
- 
-    
-    background-size: cover; 
-    background-position: center;
-    overflow: hidden;
-    height:  400px;
 
-}
 .image1{
-    height:  466px;
-    width:  540px;
+    height:  30vw;
+    width:  40vw;
+    object-fit: cover;
   
 }
 .about-team-member {

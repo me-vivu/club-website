@@ -96,6 +96,7 @@ const AddMemberForm = () => {
           >
             <option value="">Select Position</option>
             <option value="Secretary">Secretary</option>
+            <option value="Co-Secretary">Secretary</option>
             <option value="Joint Secretary">Joint Secretary</option>
             <option value="Executive member">Executive member</option>
             <option value="Volunteer">Volunteer</option>

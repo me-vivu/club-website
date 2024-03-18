@@ -7,8 +7,13 @@ import OtpVerify from './auth/otpVerify'
 import AboutUs from './about/about-us';
 import EVENT1 from './events/eventsection';
 import Belownav from './events/belownav';
+<<<<<<< HEAD
 import { Navigate } from 'react-router-dom';
 import ProjectSection from './home/project';
+=======
+
+import ProjectSection from './project-section/project'
+>>>>>>> 5ed00a0d55e351e6775287a04a1ecce99ce5bdf9
 
 import AddProjectForm from './database/projects/projects';
 import AddEventForm from './database/events/events';

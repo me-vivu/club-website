@@ -25,8 +25,9 @@ const CarouselComponent = () => {
 
     return (
 
-        
-        <Carousel
+        <div className='carausel-box'>
+            <Carousel
+            
             showIndicators={false}
             showStatus={false}
             interval={4000}
@@ -37,16 +38,21 @@ const CarouselComponent = () => {
             >
                 {carouselItems.map((item, index) => (
                     <div key={index} className="banner-inner-section">
-                    <span className="d-block">{item.header}</span>
-                    <h1>
-                        {item.firstLine} <br /> {item.secondLine}
-                    </h1>
-                    <div className="generic-btn">
-                        <a href="./register">DISCOVER MORE</a>
+                        <span className="d-block">{item.header}</span>
+                        <h1>
+                            {item.firstLine} <br /> {item.secondLine}
+                        </h1>
+                        <div className="generic-btn">
+                            <a href="./register">DISCOVER MORE</a>
                     </div>
                     </div>
                 ))}
-        </Carousel>
+            </Carousel>
+
+        </div>
+
+        
+        
         );
 };
 

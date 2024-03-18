@@ -92,6 +92,7 @@ a:hover {
 .header-main-con {
     position: absolute;
     top: 0;
+    background-color: #272d322d;
     border-bottom: 1px solid rgb(255 255 255 / 30%);
     z-index: 9999;
 }
@@ -226,6 +227,12 @@ a:hover {
     color: var(--button-color);
 }
 
+.header-main-con .navbar-nav .nav-item::after {
+    color: var(--button-color);
+}
+
+
+
 .header-main-con .navbar-nav .nav-item.dropdown .nav-link.active:hover::before,
 .header-main-con .navbar-nav .nav-item.dropdown .nav-link:hover::before {
     display: none;
@@ -234,15 +241,19 @@ a:hover {
 /* header section styling end here */
 /* banner section styling start here */
 .banner-main-section {
+    
+    
+    
     background-image: url(../assets/images/drone-view.png) ;
     background-size: cover;
     height: 983px;
     width: 100%;
+
     position: relative;
 }
 
 .banner-inner-section{
-    padding-top: 8%;
+    
     text-align: left;
     padding-left: 10%;
 }
@@ -260,7 +271,8 @@ a:hover {
 }
 
 .banner-main-section .carousel {
-    position: unset;
+    position: set;
+    
 }
 
 .banner-outer-section {
