@@ -13,3 +13,22 @@
     margin-left: 40%;
     margin-top: 150px;
 }
+
+.image-view-project{
+    width: 100%;
+    
+    
+}
+
+.img-fluid{
+    border-radius: 8px;
+}
+
+.align-center {
+    margin: 0 auto; /* This sets the left and right margins to auto, which centers the element */
+    text-align: center; /* This centers the content inside the div if needed */
+}
+
+.singleblog-section{
+    margin-bottom: 10px;
+}

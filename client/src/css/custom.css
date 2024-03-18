@@ -1480,23 +1480,13 @@ a:hover {
 /* footer section styling end here */
 /* services page styling start here */
 .sub-banner-section {
-    background: url(../images/services-banner-img.jpg) no-repeat center;
+    background: url(../assets/images/drone-view.png)    ;
     background-size: cover;
     height: 498px;
     text-align: center;
     position: relative;
 }
 
-.sub-banner-section::after {
-    content: "";
-    background: url(../images/sub-banner-right-img.png) no-repeat;
-    background-size: cover;
-    width: 584px;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-}
 
 .sub-banner-inner-section {
     padding-top: 10px;
@@ -2172,7 +2162,7 @@ a:hover {
 /* 404 page styling end here */
 /* blog page styling start here */
 .blog-banner-section {
-    background: url(../images/blog-banner-img.jpg) no-repeat center;
+    background: url(../assets/images/drone-view.png) no-repeat center;
     background-size: cover;
 }
 

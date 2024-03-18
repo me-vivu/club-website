@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navigation from "../home/navigation";
 import Footer from "../home/footer";
+
 import image from "../assets/images/project-bg.jpg"
 import "./project.css";
+
 
 function Projectpage() {
   const [projects, setProjects] = useState([]);
