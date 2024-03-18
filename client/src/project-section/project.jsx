@@ -1,14 +1,14 @@
 import React from "react";
 import Navigation from "../home/navigation";
 import Footer from "../home/footer";
-import UPimg from "../events/belownav";
+
 // import img2 from "../assets/images/image4.jpeg"
 import first from "../assets/images/pronybhyia.jpg"
 import second from "../assets/images/harshitadi.jpg"
 import third from "../assets/images/bhatibhyia.jpg"
 import forth from "../assets/images/vivekbhyia.jpg"
 import fifth from "../assets/images/abhilashbhyia.jpg"
-import sixth from "../assets/images/dubeybhyia.jpg"
+
 
 import "./project.css" ;
 
