@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navigation from "../home/navigation";
+import backgroundImage from "../assets/images/event-bg.png"
 import Footer from "../home/footer";
+
 import "./event.css";
 
 
@@ -25,10 +27,10 @@ function EventsImage() {
     <div>
       <Navigation />
 
-      <section className="sub-banner-section1 about-page-banner w-100 float-left d-flex align-items-center">
+      <section className="sub-banner-section about-page-banner w-100 float-left d-flex align-items-center" style={{backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover'}}>
         <div className="container">
           <div className="sub-banner-inner-section">
-            <h1 className="texthai">OUR EVENTS</h1>
+            
           </div>
         </div>
       </section>

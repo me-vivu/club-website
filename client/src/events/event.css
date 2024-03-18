@@ -13,16 +13,6 @@
     margin-left: 50%;
     margin-top: 150px;
 }
-.sub-banner-section1{
-    background-image: url(../assets/images/drone-view.png);
-    /* margin-top: 150px; */
-    
-    background-size: cover; /* Optional: Adjust how the background image is displayed */
-    background-position: center;
-    overflow: hidden;
-    height: 600px;
-
-}
 
 .events-page-image{
     width: 60%;

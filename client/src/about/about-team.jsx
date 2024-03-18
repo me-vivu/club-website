@@ -12,7 +12,7 @@ function Aboutteam() {
         // Make a GET request using Axios
         axios.get(apiUrl)
             .then(response => {
-                console.log("inside the get statement")
+                
                 console.log(response.data); 
                 // If the request is successful, set the team member data in state
                 setTeamMemberData(response.data);

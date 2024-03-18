@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navigation from "../home/navigation";
 import Footer from "../home/footer";
+import image from "../assets/images/project-bg.jpg"
 import "./project.css";
 
 function Projectpage() {
@@ -24,11 +25,9 @@ function Projectpage() {
     <div>
       <Navigation />
 
-      <section className="sub-banner-section1 about-page-banner w-100 float-left d-flex align-items-center">
+      <section className="sub-banner-section about-page-banner w-100 float-left d-flex align-items-center " style={{backgroundImage: `url(${image})`, backgroundSize: 'cover'}}>
         <div className="container">
-          <div className="sub-banner-inner-section">
-            <h1 className="texthai">OUR PROJECTS</h1>
-          </div>
+          
         </div>
       </section>
 

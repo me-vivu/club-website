@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from "../assets/images/nitap-logo.png";
-import instagram from "../assets/images/icons/instagram.png";
-import facebook from "../assets/images/icons/facebook.png";
-import linkedin from "../assets/images/icons/linkedin.png";
-import { useNavigation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 function Header() {
+  const location = useLocation();
+  const [activeLink, setActiveLink] = useState(getActiveLink(location.pathname));
+
+  const handleNavLinkClick = (linkName) => {
+    setActiveLink(linkName);
+  };
+
+  // Function to determine the active link based on the current pathname
+  function getActiveLink(pathname) {
+    if (pathname === '/home-page') return 'home';
+    if (pathname === '/about') return 'about';
+    if (pathname === '/project-page') return 'projects';
+    if (pathname === '/eventsection') return 'events';
+    return '';
+  }
+
   return (
     <div className="header-main-con w-100 float-left">
       <div className="container-fluid">
@@ -30,28 +44,48 @@ function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link p-0 active" href="/home-page">HOME</a>
+                <a
+                  href="/home-page"
+                  className={`nav-link p-0 ${activeLink === 'home' ? 'active' : ''}`}
+                  onClick={() => handleNavLinkClick('home')}
+                >
+                  HOME
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link p-0" href="/about">ABOUT</a>
+                <a
+                  href="/about"
+                  className={`nav-link p-0 ${activeLink === 'about' ? 'active' : ''}`}
+                  onClick={() => handleNavLinkClick('about')}
+                >
+                  ABOUT
+                </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link p-0" href="/project-page">PROJECTS</a>          
+                <a
+                  href="/project-page"
+                  className={`nav-link p-0 ${activeLink === 'projects' ? 'active' : ''}`}
+                  onClick={() => handleNavLinkClick('projects')}
+                >
+                  PROJECTS
+                </a>
               </li>
-              
-              
               <li className="nav-item">
-                <a className="nav-link p-0" href="/eventsection">EVENTS</a>
+                <a
+                  href="/eventsection"
+                  className={`nav-link p-0 ${activeLink === 'events' ? 'active' : ''}`}
+                  onClick={() => handleNavLinkClick('events')}
+                >
+                  EVENTS
+                </a>
               </li>
-
-              
             </ul>
             <div className="header-social-links">
               <ul className="list-unstyled mb-0 d-flex align-items-center">
-                <li><a href="https://www.facebook.com/login/"><img className="social-logo" src={facebook} alt="Facebook" /></a></li>
-                <li><a href="https://www.linkedin.com/login"><img className="social-logo" src={linkedin} alt="LinkedIn" /></a></li>
-                <li><a href="https://twitter.com/i/flow/login"><img className="social-logo" src={instagram} alt="Instagram" /></a></li>
-                <li><a href=""><img className="social-logo" src={instagram} alt="Instagram" /></a></li>
+                <li><a href="https://www.facebook.com/login/"><i className="fa fa-envelope"></i></a></li>
+                <li><a href="https://www.linkedin.com/login"><i className="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://twitter.com/i/flow/login"><i className="fab fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/i/flow/login"><i className="fab fa-youtube"></i></a></li>
               </ul>
             </div>
           </div>

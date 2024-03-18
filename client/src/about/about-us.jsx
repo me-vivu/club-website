@@ -3,15 +3,8 @@ import React from "react";
 import Footer from "../home/footer";
 import Navigation from "../home/navigation";
 import MembImage from "./about-team";
-import ProgressCounterSection from "../home/dataView";
-
 import img2 from "../assets/images/image4.jpeg"
-import first from "../assets/images/pronybhyia.jpg"
-import second from "../assets/images/harshitadi.jpg"
-import third from "../assets/images/bhatibhyia.jpg"
-import forth from "../assets/images/vivekbhyia.jpg"
-import fifth from "../assets/images/abhilashbhyia.jpg"
-import sixth from "../assets/images/dubeybhyia.jpg"
+import image from "../assets/images/team.png"
 import "./abou-us.css" ; 
 import "../home/home-page.css"
 import "../css/custom.css"
@@ -27,11 +20,9 @@ function AboutUs(){
           
 
            
-            <section className="sub-banner-section about-page-banner w-100 float-left d-flex align-items-center">
+            <section className="sub-banner-section about-page-banner w-100 float-left d-flex align-items-center" style={{backgroundImage: `url(${image})`, backgroundSize: 'cover'}}>
                 <div className="container">
-                    <div className="sub-banner-inner-section" >
-                        <h1 className="texthai"> ABOUT US</h1>
-                    </div>
+                    
                 </div>
             </section>
             {/* <!-- SUB BANNER SECTION END HERE-->
@@ -73,8 +64,8 @@ function AboutUs(){
             <section className="about-team-section w-100 float-left padding-top padding-bottom">
                 <div className="container">
                     <div className="generic-title text-center" >
-                        <h2>CONSULTKING TEAM</h2>
-                        <p>Podcasting operational change management</p>
+                        <h2>OUR TEAM</h2>
+                        <p>TEAM BEHIND EVERYTHING</p>
                     </div>
                     
                     <MembImage/> 
