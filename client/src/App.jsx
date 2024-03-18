@@ -8,8 +8,6 @@ import AboutUs from './about/about-us';
 import EVENT1 from './events/eventsection';
 import Belownav from './events/belownav';
 
-import ProjectSection from './home/project';
-
 
 import ProjectSection from './project-section/project'
 import BlogPost from './events/event-view';
@@ -32,7 +30,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Navigate to={"/home-page"} replace/>} />
+        
         <Route path='/register' element={<Signup/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/verification' element={<OtpVerify/>}></Route>

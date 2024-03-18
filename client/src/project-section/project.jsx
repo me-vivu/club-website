@@ -2,19 +2,10 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navigation from "../home/navigation";
 import Footer from "../home/footer";
-<<<<<<< HEAD
 
-// import img2 from "../assets/images/image4.jpeg"
-import first from "../assets/images/pronybhyia.jpg"
-import second from "../assets/images/harshitadi.jpg"
-import third from "../assets/images/bhatibhyia.jpg"
-import forth from "../assets/images/vivekbhyia.jpg"
-import fifth from "../assets/images/abhilashbhyia.jpg"
-
-=======
 import image from "../assets/images/project-bg.jpg"
 import "./project.css";
->>>>>>> 5ed00a0d55e351e6775287a04a1ecce99ce5bdf9
+
 
 function Projectpage() {
   const [projects, setProjects] = useState([]);
