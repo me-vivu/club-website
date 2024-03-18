@@ -12,8 +12,8 @@ import "../css/special-classes.css"
 
 
 import 'aos/dist/aos.css';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faLongArrowAltRight, faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
+// import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+// import { faLongArrowAltRight, faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 
 import CarouselComponent from "./carausel";
 import ProjectSection from "./project";
