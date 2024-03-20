@@ -50,7 +50,7 @@ function EventsImage() {
             <div className="supplementory-inner-section" data-aos="fade-up" data-aos-duration="700">
               <div className="supplementory-left-box">
                 <h2>{event.eventName}</h2>
-                <p>{event.description}</p>
+                <p>{event.description.substring(0, 100) + "...."}</p>
                 <div className="service-btn">
                 <Link to={`/viewEvent/${event.eventID}`}>READ MORE</Link>
                 </div>

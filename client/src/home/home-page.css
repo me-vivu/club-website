@@ -33,8 +33,9 @@
 }
 
 .event-img{
-    width: 350px;
-    height: 338px;
+    width: 25vw;
+    height: 22vw;
+    object-fit: cover;
 }
 
 #progress-img{

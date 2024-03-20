@@ -46,7 +46,7 @@ const EventSection = () => {
                                     <span>BY ADMIN</span>
                                 </div>
                                 <h4><a href="#">{event.eventName}</a></h4>
-                                <p>{event.description}</p>
+                                <p>{event.description.substring(0, 75) + "...."}</p>
                                 <div className="blog-btn position-relative">
                                     <Link to={`/viewEvent/${event.eventID}`}>READ MORE</Link>
                                 </div>

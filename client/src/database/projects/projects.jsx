@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import uploadFileToGoogleDrive from '../../uploader';
 import "./add-projects.css"
 
 const AddProjectForm = () => {
@@ -19,6 +20,22 @@ const AddProjectForm = () => {
       ...projectData,
       [name]: value
     });
+  };
+
+  const handleFileChange = async (e) => {
+    const {name} = e.target;
+    const file = e.target.files[0];
+    try {
+      const imageUrl = await uploadFileToGoogleDrive(file);
+      setProjectData({
+        ...projectData,
+        [name]: imageUrl
+      });
+
+      console.log("Image uploaded")
+    } catch (error) {
+      console.error('Error uploading image:', error);
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -72,24 +89,11 @@ const AddProjectForm = () => {
           />
         </div>
         <div>
-          <label>Image Source:</label>
-          <input
-            type="text"
-            name="imgSrc"
-            value={projectData.imgSrc}
-            onChange={handleChange}
-          />
+          <label>Display Image:</label>
+          <input type="file" name="imgSrc" onChange={handleFileChange} />
         </div>
 
-        <div>
-          <label>Second Image</label>
-          <input
-            type="text"
-            name="secondImg"
-            value={projectData.secondImg}
-            onChange={handleChange}
-          />
-        </div>
+        
 
         <div>
           <label>Description:</label>
@@ -110,6 +114,12 @@ const AddProjectForm = () => {
             <option value="Completed">Completed</option>
           </select>
         </div>
+
+        <div>
+          <label>secondImage:</label>
+          <input type="file" name="secondImg" onChange={handleFileChange} />
+        </div>
+
         <button type="submit">Add Project</button>
       </form>
     </div>

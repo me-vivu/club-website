@@ -48,7 +48,7 @@ function Projectpage() {
             >
               <div className="supplementory-left-box">
                 <h2>{project.projectName}</h2>
-                <p>{project.description}</p>
+                <p>{project.description.substring(0, 100) + "...."}</p>
                 <div className="service-btn">
                   <Link to={`/viewProject/${project.projectID}`}>READ MORE</Link>
                   

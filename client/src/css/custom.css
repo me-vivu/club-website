@@ -1602,7 +1602,7 @@ a:hover {
 
 .supplementory-inner-section {
     display: grid;
-    gap: 68px;
+    gap: 10%;
     grid-template-columns: 43% 51%;
     align-items: center;
     position: relative;

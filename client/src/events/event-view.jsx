@@ -12,6 +12,7 @@ function BlogPost() {
     const {eventId} = useParams();
   // Define state to hold the blog post data
   const [blogPost, setBlogPost] = useState(null);
+  const [breakpoints, setBreakPoints] = useState([]);
 
   // Fetch blog post data from the server when the component mounts
   useEffect(() => {
@@ -44,7 +45,30 @@ function BlogPost() {
   
     return formattedDate;
   }
-  
+
+  function findBreakpoints (text) {
+    const sentences = text.split('. '); // Split the text into sentences
+    const totalSentences = sentences.length;
+
+    const breakpoints = [];
+    let currentLength = 0;
+
+    // Loop through sentences and find breakpoints
+    for (let i = 0; i < totalSentences; i++) {
+      currentLength += sentences[i].length + 2; // Add 2 for the period and space
+      if (currentLength >= text.length / 3 && breakpoints.length < 2) {
+        breakpoints.push(currentLength);
+      }
+    }
+
+    setBreakPoints(breakpoints);
+
+  };
+
+ 
+
+
+
   return (
     <div>
       <Navigation/>
@@ -66,7 +90,7 @@ function BlogPost() {
                     <span className="text-size-14 text-mr">By : Admin</span>
                     <i className="fas fa-calendar"></i>
                     <span className="mb-0 text-size-14">{formatDate(blogPost.date)}</span>
-                    <p className="text-size-14">{blogPost.description}</p>
+                    <p className="text-size-14">{blogPost.description.split(". ").slice(0,8)}</p>
                   </div>
 
                   <div className="content2" data-aos="fade-up" data-aos-duration="700">
@@ -78,14 +102,15 @@ function BlogPost() {
                 </div>
 
                     <p className="text text-size-14">
-                            {blogPost.description}
+                            
+                            {blogPost.description.split(". ").slice(8,12)}
                     </p>
-                    <div className="content3" data-aos="fade-up" data-aos-duration="700">
-                        <figure className="image1" data-aos="fade-up">
-                        <img src={blogPost.eventImage} alt="" className="img-fluid" loading="lazy" />
+                    <div className="content3"  data-aos-duration="700">
+                        <figure className="image1" >
+                        <img src={blogPost.secondImage} alt="" className="img-fluid" loading="lazy" />
                         </figure>
                         <p className="text text-size-14">
-                        {blogPost.description}
+                        {blogPost.description.split(". ").slice(12)}
                         </p>
                     </div>
 
