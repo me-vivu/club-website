@@ -39,6 +39,8 @@
 
 #progress-img{
     width: 50%;
+    color: white;
+    filter: invert(65%);
 }
 
 

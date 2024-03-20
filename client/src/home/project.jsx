@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const ProjectSection = () => {
 
@@ -34,7 +35,7 @@ const ProjectSection = () => {
                             <div className="consulting-services-box" key={project.projectID} style={{backgroundImage: `url(${project.imgSrc})`, backgroundSize: 'cover'}}>
                                 <h4 style={{color: 'white'}}>{project.projectName.split(" ")[0]} <br/> {project.projectName.split(" ")[1]}</h4>
                                 <div className="consulting-services-img-con d-flex align-items-center">
-                                    <a href={`single-service.html?id=${project.id}`}>READ MORE</a>
+                                    <Link to={`/viewProject/${project.projectID}`}>READ MORE</Link>
                                 </div>
                             </div>
                         ))}

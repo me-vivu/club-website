@@ -1,92 +1,114 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from "../home/navigation"
-import image from "../assets/images/car02.jpg"
+import image from "../assets/images/car02.jpg";
+import quote from "../assets/images/quote-img.png"
 import Footer from "../home/footer"
+import axios from 'axios';
 
 import 'aos/dist/aos.css';
+import { Link, NavLink, useParams } from 'react-router-dom';
 
 function BlogPost() {
+    const {eventId} = useParams();
+  // Define state to hold the blog post data
+  const [blogPost, setBlogPost] = useState(null);
+
+  // Fetch blog post data from the server when the component mounts
+  useEffect(() => {
+    const fetchBlogPost = async (eventId) => {
+      try {
+        
+        const response = await axios.get(`http://localhost:3001/event-view/${eventId}`); 
+        
+        setBlogPost(response.data)
+      } catch (error) {
+        console.error('Error fetching blog post:', error);
+      }
+    };
+
+    fetchBlogPost(eventId);
+  }, [eventId]); 
+
+  const handleForm = () => {
+    // Redirect the user to google.com when the button is clicked
+    window.location.href = blogPost.formLink;
+  };
+
+  function formatDate(date) {
+    // Assuming date is a string in ISO 8601 format (e.g., "2022-12-20T00:00:00")
+    const formattedDate = new Date(date).toLocaleDateString('en-US', {
+      month: 'short',
+      day: '2-digit',
+      year: 'numeric'
+    });
+  
+    return formattedDate;
+  }
+  
   return (
     <div>
-        <Navigation/>
-      {/* SUB BANNER SECTION START */}
-        <section className="sub-banner-section blog-banner-section w-100 float-left d-flex align-items-center">
-            <div className="container">
-                <div className="sub-banner-inner-section" data-aos="fade-up" data-aos-duration="700">
-               
-                </div>
-            </div>
-        </section>
-        {/* SUB BANNER SECTION END HERE*/}
-        {/* Single Blog */}
-        <section className="singleblog-section blogpage-section">
-            <div className="container">
-            <div >
-                <div className="col-lg-10 col-md-12 col-sm-12 col-12 align-center">
+      <Navigation/>
+
+      {/* Single Blog */}
+      <section className="singleblog-section blogpage-section">
+        <div className="container">
+          {blogPost && (
+            <div>
+              <div className="col-lg-10 col-md-12 col-sm-12 col-12 align-center">
                 <div className="main-box">
-                    <figure className="image-view-project" data-aos="fade-up" data-aos-duration="700">
-                        <img src={image} alt="" className="img-fluid" loading="lazy" />
+                  <figure className="image-view-project" data-aos="fade-up" data-aos-duration="700">
+                    <img src={blogPost.eventImage} alt="" className="img-fluid" loading="lazy" />
+                  </figure>
+
+                  <div className="content1" data-aos="fade-up" data-aos-duration="700">
+                    <h3>{blogPost.eventName}</h3>
+                    <i className="fas fa-user"></i>
+                    <span className="text-size-14 text-mr">By : Admin</span>
+                    <i className="fas fa-calendar"></i>
+                    <span className="mb-0 text-size-14">{formatDate(blogPost.date)}</span>
+                    <p className="text-size-14">{blogPost.description}</p>
+                  </div>
+
+                  <div className="content2" data-aos="fade-up" data-aos-duration="700">
+                    <figure className="singleblog-quoteimage">
+                        <img src= {quote} alt=""  loading="lazy" />
                     </figure>
+                    <p className="mb-0 text-white text-size-18">“Duis aute irure dolor in reprehenderit in voluptate
+                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat”</p>
+                </div>
 
-                    <div className="content1" data-aos="fade-up" data-aos-duration="700">
-                        <h4>Why You Need Virtual Assistant for Your Company</h4>
-                        <i className="fas fa-user"></i>
-                        <span className="text-size-14 text-mr">By : Admin</span>
-                        <i className="fas fa-calendar"></i>
-                        <span className="mb-0 text-size-14">Dec 20,2022</span>
-                        <p className="text-size-14">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                        in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                        eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
-                    </div>
-
-                    <div className="content2" data-aos="fade-up" data-aos-duration="700">
-                        <figure className="singleblog-quoteimage">
-                            <img src="assets/images/singleblog-quoteimage.png" alt="" className="img-fluid" loading="lazy" />
-                        </figure>
-                        <p className="mb-0 text-white text-size-18">“Duis aute irure dolor in reprehenderit in voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur.xcepteur sint occaecat”</p>
-                        </div>
-                        <p className="text text-size-14">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                        officia deserunt mollit anim id est laborum.
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                        laudantium, totam rem aperiam, eaque ipsa quae
-                        ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-                        ipsam voluptatem quia voluptas.
-                        </p>
-                        <div className="content3" data-aos="fade-up" data-aos-duration="700">
+                    <p className="text text-size-14">
+                            {blogPost.description}
+                    </p>
+                    <div className="content3" data-aos="fade-up" data-aos-duration="700">
                         <figure className="image1" data-aos="fade-up">
-                            <img src="assets/images/singleblog-image2.jpg" alt="" className="img-fluid" loading="lazy" />
+                        <img src={blogPost.eventImage} alt="" className="img-fluid" loading="lazy" />
                         </figure>
-                        <p className="text text-size-14">Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                            qui officia deserunt mollit anim id est laborum.
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                            laudantium, totam rem aperiam, eaque ipsa quae
-                            ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
-                            enim ipsam voluptatem quia voluptas.
+                        <p className="text text-size-14">
+                        {blogPost.description}
                         </p>
                     </div>
-                </div>
-                </div>
-            </div>
-            </div>
 
+                  {/* Add other content sections here */}
+                </div>
+
+                <button className="register-button" onClick={handleForm}>Register Now</button>
+              </div>
+
+              
+            </div>
             
-        </section>
-        
-
-        <Footer/>
-
+          )}
 
         
 
-        
-        
-        
-        
+          
+        </div>
 
-      
+        
+      </section>
+
+      <Footer/>
     </div>
   );
 }

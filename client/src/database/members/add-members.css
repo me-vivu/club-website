@@ -47,4 +47,27 @@
     color: red;
     margin-top: 5px;
   }
+
+  .add-member-container{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .list-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .action-btn{
+    margin: 8px;
+    border-radius: 5px;
+    background-color: #2672c3;
+  }
+
+  .action-btn:hover{
+    margin: 8px;
+    border-radius: 5px;
+    background-color: red;
+  }
   

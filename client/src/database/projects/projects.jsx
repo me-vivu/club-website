@@ -7,6 +7,7 @@ const AddProjectForm = () => {
     projectID: '',
     projectName: '',
     imgSrc: '',
+    secondImg: '',
     description: '',
     status: 'Ongoing'
   });
@@ -31,6 +32,7 @@ const AddProjectForm = () => {
         projectID: '',
         projectName: '',
         imgSrc: '',
+        secondImg: '',
         description: '',
         status: 'Ongoing'
       });
@@ -78,6 +80,17 @@ const AddProjectForm = () => {
             onChange={handleChange}
           />
         </div>
+
+        <div>
+          <label>Second Image</label>
+          <input
+            type="text"
+            name="secondImg"
+            value={projectData.secondImg}
+            onChange={handleChange}
+          />
+        </div>
+
         <div>
           <label>Description:</label>
           <textarea

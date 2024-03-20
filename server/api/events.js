@@ -11,6 +11,7 @@ router.post('/addEvents', async (req, res) => {
       eventID: req.body.eventID,
       eventName: req.body.eventName,
       eventImage: req.body.eventImage,
+      secondImage: req.body.secondImage,
       description: req.body.description,
       date: req.body.date,
       time: req.body.time,

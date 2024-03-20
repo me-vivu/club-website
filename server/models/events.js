@@ -12,6 +12,11 @@ const eventSchema = new mongoose.Schema({
     required: true
   },
 
+  secondImage:{
+    type: String,
+    required: true
+  },
+
   eventName: {
     type: String,
     required: true
