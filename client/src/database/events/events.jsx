@@ -8,6 +8,7 @@ const AddEventForm = () => {
     eventID: '',
     eventName: '',
     eventImage: '',
+    secondImage: '',
     description: '',
     date: '',
     time: '',
@@ -23,12 +24,13 @@ const AddEventForm = () => {
   };
 
   const handleFileChange = async (e) => {
+    const {name} = e.target;
     const file = e.target.files[0];
     try {
       const imageUrl = await uploadFileToGoogleDrive(file);
       setFormData({
         ...formData,
-        eventImage: imageUrl
+        [name]: imageUrl
       });
     } catch (error) {
       console.error('Error uploading image:', error);
@@ -44,6 +46,7 @@ const AddEventForm = () => {
         eventID: '',
         eventName: '',
         eventImage: '',
+        secondImage: '',
         description: '',
         date: '',
         time: '',
@@ -73,6 +76,11 @@ const AddEventForm = () => {
           Event Name:
           <input type="text" name="eventName" value={formData.eventName} onChange={handleChange} required />
         </label>
+
+        <div>
+          <label>Image:</label>
+          <input type="file" name="eventImage" onChange={handleFileChange} />
+        </div>
         
         <label>
           Description:
@@ -98,9 +106,10 @@ const AddEventForm = () => {
           Form Link:
           <input type="text" name="formLink" value={formData.formLink} onChange={handleChange} />
         </label>
+        
         <div>
-          <label>Image:</label>
-          <input type="file" name="file" onChange={handleFileChange} />
+          <label>secondImage:</label>
+          <input type="file" name="secondImage" onChange={handleFileChange} />
         </div>
         <br></br>
         <button type="submit">Add Event</button>

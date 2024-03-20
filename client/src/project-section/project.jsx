@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Navigation from "../home/navigation";
 import Footer from "../home/footer";
-
+import { Link } from 'react-router-dom';
 import image from "../assets/images/project-bg.jpg"
 import "./project.css";
 
@@ -50,7 +50,8 @@ function Projectpage() {
                 <h2>{project.projectName}</h2>
                 <p>{project.description}</p>
                 <div className="service-btn">
-                  <a href={`single-project/${project.projectID}`}>READ MORE</a>
+                  <Link to={`/viewProject/${project.projectID}`}>READ MORE</Link>
+                  
                 </div>
               </div>
               <div className="supplementory-right-box">

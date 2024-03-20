@@ -3,6 +3,7 @@ import axios from "axios";
 import Navigation from "../home/navigation";
 import backgroundImage from "../assets/images/event-bg.png"
 import Footer from "../home/footer";
+import { Link } from 'react-router-dom';
 
 import "./event.css";
 
@@ -51,7 +52,7 @@ function EventsImage() {
                 <h2>{event.eventName}</h2>
                 <p>{event.description}</p>
                 <div className="service-btn">
-                  <a href="single-service.html">READ MORE</a>
+                <Link to={`/viewEvent/${event.eventID}`}>READ MORE</Link>
                 </div>
               </div>
               <div className="supplementory-right-box">

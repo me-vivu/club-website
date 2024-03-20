@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import "./home-page.css"
+import { Link } from 'react-router-dom';
 
 const EventSection = () => {
     const [events, setEvents] = useState([]);
@@ -47,7 +48,7 @@ const EventSection = () => {
                                 <h4><a href="#">{event.eventName}</a></h4>
                                 <p>{event.description}</p>
                                 <div className="blog-btn position-relative">
-                                    <a href="#">READ MORE</a>
+                                    <Link to={`/viewEvent/${event.eventID}`}>READ MORE</Link>
                                 </div>
                             </div>
                         </div>

@@ -13,6 +13,11 @@ const projectSchema = new mongoose.Schema({
   imgSrc: {
     type: String
   },
+  
+  secondImg: {
+    type: String
+  },
+
   description: {
     type: String
   },

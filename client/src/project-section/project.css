@@ -32,3 +32,16 @@
 .singleblog-section{
     margin-bottom: 10px;
 }
+
+
+.project-view-disp{
+    width: 80vw;
+    height: 50vh;
+    object-fit: cover;
+    
+
+}
+
+.project-view-second{
+    width:40vw;
+}
