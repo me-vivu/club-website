@@ -43,7 +43,7 @@ const ProjectView = () => {
                                 <div className="single-service-sub-section">
                                     <div className="single-service-sub-img-con" data-aos="fade-up" data-aos-duration="700">
                                         <figure className="mb-0">
-                                            <img src={projectData.imgSrc} alt="single-case-sub-img" loading="lazy" className='project-view-second'/>
+                                            <img src={projectData.secondImg} alt="single-case-sub-img" loading="lazy" className='project-view-second'/>
                                         </figure>
                                     </div>
                                     <div className="single-service-sub-text-con">

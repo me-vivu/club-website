@@ -114,7 +114,7 @@ function BlogPost() {
                         </p>
                     </div>
 
-                  {/* Add other content sections here */}
+                  
                 </div>
 
                 <button className="register-button" onClick={handleForm}>Register Now</button>

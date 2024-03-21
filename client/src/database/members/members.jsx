@@ -89,74 +89,6 @@ const AddMemberForm = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="form-container">
-      <h2>Add Club Member</h2>
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Member ID:</label>
-          <input
-            type="text"
-            name="memberID"
-            value={memberData.memberID}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Name:</label>
-          <input
-            type="text"
-            name="name"
-            value={memberData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Position:</label>
-          <select
-            name="position"
-            value={memberData.position}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select Position</option>
-            <option value="Secretary">Secretary</option>
-            <option value="Co-Secretary">Co-Secretary</option>
-            <option value="Joint Secretary">Joint Secretary</option>
-            <option value="Executive member">Executive member</option>
-            <option value="Volunteer">Volunteer</option>
-          </select>
-        </div>
-        <div>
-          <label>Image:</label>
-          <input type="file" name="file" onChange={handleFileChange} />
-        </div>
-        <div>
-          <label>Email ID:</label>
-          <input
-            type="email"
-            name="emailId"
-            value={memberData.emailId}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>LinkedIn:</label>
-          <input
-            type="text"
-            name="linkedIn"
-            value={memberData.linkedIn}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Add Member</button>
-      </form>
-=======
 
     <div className='add-member-container'>
       <div className="form-container">
@@ -249,7 +181,6 @@ const AddMemberForm = () => {
         </ul>
       </div>
 
->>>>>>> b4c60f730666af9db88ee2bf6f594ce3b46657ce
     </div>
 
     
